@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leaflet debug page</title>
+	<title>Record Clustering Example</title>
 
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css" />
+	<link rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.ie.css" /><![endif]-->
-	<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+	<script src="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="screen.css" />
 
@@ -22,12 +22,12 @@
 	<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>
 	<script type="text/javascript">
 
-		var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
-			cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade, Points &copy 2012 LINZ',
-			cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 17, attribution: cloudmadeAttribution}),
+		var base1 = new L.TileLayer('http://a.tiles.mapbox.com/v3/landplanner.map-dm7abyjg/{z}/{x}/{y}.png', {
+      attribution: '<a href="http://mapbox.com/about/maps/" target="_blank">w/ Mapbox</a>'
+      }),
 			latlng = new L.LatLng(-37.82, 175.24);
 
-		var map = new L.Map('map', {center: latlng, zoom: 13, layers: [cloudmade]});
+		var map = new L.Map('map', {center: latlng, zoom: 13, layers: [base1]});
 
 		var markers = new L.MarkerClusterGroup();
 		
