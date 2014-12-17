@@ -116,8 +116,8 @@ removeLayers(layerArray): Removes the markers in the given array from the Marker
 
 ## Handling LOTS of markers
 The Clusterer can handle 10000 or even 50000 markers (in chrome). IE9 has some issues with 50000.
-[realworld 10000 example](http://leaflet.github.com/Leaflet.markercluster/example/marker-clustering-realworld.10000.html)
-[realworld 50000 example](http://leaflet.github.com/Leaflet.markercluster/example/marker-clustering-realworld.50000.html)
+[realworld 10000 example](http://thadk.github.com/Leaflet.markercluster/example/marker-clustering-realworld.10000.html)
+[realworld 50000 example](http://thadk.github.com/Leaflet.markercluster/example/marker-clustering-realworld.50000.html)
 Performance optimizations could be done so these are handled more gracefully (Running the initial clustering over multiple JS calls rather than locking the browser for a long time)
 
 ### License
